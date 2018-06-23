@@ -1,0 +1,329 @@
+% !TeX encoding = ISO-8859-1
+% Ce fichier contient le code comment� de l'extension "simplekv"
+%
+% IMPORTANT : pour que les commentaires s'affichent correctement,
+%             ouvrir ce fichier avec l'encodage ISO-8859-1
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                    %
+\def\skvname                  {simplekv}                             %
+\def\skvver                     {0.1}                                %
+%                                                                    %
+\def\skvdate                 {2017/08/08}                            %
+%                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% --------------------------------------------------------------------
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%
+% %     http://www.latex-project.org/lppl.txt
+%
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+% --------------------------------------------------------------------
+% This work has the LPPL maintenance status `maintained'.
+%
+% The Current Maintainer of this work is Christian Tellechea
+% Copyright : Christian Tellechea 2017
+% email: unbonpetit@netc.fr
+%        Commentaires, suggestions et signalement de bugs bienvenus !
+%        Comments, bug reports and suggestions are welcome.
+% Copyright: Christian Tellechea 2017
+% --------------------------------------------------------------------
+% L'extension simplekv est compos�e des 5 fichiers suivants :
+%   - code               : simplekv            (.tex et .sty)
+%   - manuel en fran�ais : simplekv-fr         (.tex et .pdf)
+%   - fichier lisezmoi   : README
+% --------------------------------------------------------------------
+
+\expandafter\edef\csname skv_restorecatcode\endcsname{\catcode`\noexpand\_=\the\catcode`\_\relax}
+\catcode`\_11
+
+%################################################
+%################################################
+% Cette macro est �quivalente � 0 et sert notamment � stopper le d�veloppement
+% de \romannumeral
+\chardef\skv_stop 0
+
+% D�finition du quark, notamment ins�r� � la fin d'une liste pour en reconnaitre
+% la fin et stopper la r�cursivit�
+\def\skv_quark{\skv_quark}
+
+% Voici les macros habituelles de s�lection d'arguments
+\long\def\skv_first#1#2{#1}
+\long\def\skv_second#1#2{#2}
+
+% Voici la macro pour 1-d�velopper ou 2-d�velopper le 2e argument (le 1er �tant
+% d�pouill� des accolades)
+%     \skv_exparg{<a>}{<b>} devient <a>{<b>}
+%     \skv_eearg{<a>}{<b>} devient <a>{**<b>}
+\long\def\skv_exparg#1#2{\expandafter\skv_exparg_i\expandafter{#2}{#1}}%
+\long\def\skv_eearg#1#2{\expandafter\expandafter\expandafter\skv_exparg_i\expandafter\expandafter\expandafter{#2}{#1}}%
+\long\def\skv_exparg_i#1#2{#2{#1}}
+
+% Et la macro pour 1-d�velopper le 2e argument (le 1er et le 2e argument sont
+% d�pouill�s des accolades)%
+%     \skv_expafter{<a>}{<b>} devient <a><*b>
+\long\def\skv_expafter#1#2{\expandafter\skv_expafter_i\expandafter{#2}{#1}}
+\long\def\skv_expafter_i#1#2{#2#1}
+
+% Enfin, la macro pour former le nom du 2e argument (le 1er est d�pouill� des
+% accolades)
+%     \skv_argcsname{<a>}{<b>} devient <a>\<b>
+\def\skv_argcsname#1#{\skv_argcsname_i{#1}}
+\def\skv_argcsname_i#1#2{\skv_expafter{#1}{\csname#2\endcsname}}
+
+\def\skv_eaddtomacro#1#2{\skv_exparg{\skv_exparg{\def#1}}{\expandafter#1#2}}
+
+%################################################
+%################ macros de test ################
+%################################################
+% Voici quelques macros � s�lection d'arguments pour les tests
+\def\skv_ifcsname#1{\ifcsname#1\endcsname\expandafter\skv_first\else\expandafter\skv_second\fi}
+\long\def\skv_ifx#1{\ifx#1\expandafter\skv_first\else\expandafter\skv_second\fi}
+\long\def\skv_ifempty#1{\skv_exparg\skv_ifx{\expandafter\relax\detokenize{#1}\relax}}
+
+% Ces macros sont utiles pour \skv_removeextremespaces, qui retire les
+% espaces extr�mes de son argument
+%     Voir codes 320-324 (http://progtex.fr/wp-content/uploads/2014/09/code.txt)
+%     et pages 339-343 de "Apprendre � programmer en TeX"
+\long\def\skv_ifspacefirst#1{\expandafter\skv_ifspacefirst_i\detokenize{#10} \_nil}
+\long\def\skv_ifspacefirst_i#1 #2\_nil{\skv_ifempty{#1}}
+\expandafter\def\expandafter\skv_gobspace\space{}
+\def\skv_removefirstspaces{\romannumeral\skv_removefirstspaces_i}
+\long\def\skv_removefirstspaces_i#1{\skv_ifspacefirst{#1}{\expandafter\skv_removefirstspaces_i\expandafter{\skv_gobspace#1}}{\skv_stop#1}}
+\begingroup
+	\catcode0 12
+	\long\gdef\skv_removelastspaces#1{\romannumeral\skv_removelastspaces_i#1^^00 ^^00\_nil}
+	\long\gdef\skv_removelastspaces_i#1 ^^00{\skv_removelastspaces_ii#1^^00}
+	\long\gdef\skv_removelastspaces_ii#1^^00#2\_nil{\skv_ifspacefirst{#2}{\skv_removelastspaces_i#1^^00 ^^00\_nil}{\skv_stop#1}}
+\endgroup
+\long\def\skv_removeextremespaces#1{%
+	\romannumeral\expandafter\expandafter\expandafter\skv_removelastspaces\expandafter\expandafter\expandafter
+	{\expandafter\expandafter\expandafter\skv_stop\skv_removefirstspaces{#1}}%
+}
+
+%################################################
+%############## syst�me cl�/valeur ##############
+%################################################
+% Ceci est le bool�en indiquant si la lecture de <cl�s>=<valeurs> d�finit les
+% <cl�s> _par d�faut_ ou qu'il s'agit d'une _red�finition_ des <cl�s> d�j�
+% existantes
+\newif\ifskv_default
+
+% macros chapeau appelant la m�me macro avec le bool�en pr�alablement d�fini
+\def\setKVdefault{\skv_defaulttrue\skv_readKV}
+\def\setKV{\skv_defaultfalse\skv_readKV}
+
+% L'argument obligatoire #1 est le nom du <trousseau> et #2 est l'ensemble
+% des <cl�s>=<valeurs>
+\def\skv_readKV[#1]#2{%
+	\skv_ifempty{#2}
+% Si aucune <cl�s>=<valeurs> alors qu'on d�finit les <valeurs> par d�faut,
+% message d'erreur et on s'arr�te l�
+		{\ifskv_default\errmessage{No key/val found, no default key/val defined}\fi}
+% Sinon, initialiser � <vide> la macro \skv_[<trousseau>] uniquement si on
+% cr�� les <valeurs> par d�faut
+		{\ifskv_default\skv_argcsname\let{skv_[#1]}\empty\fi
+% Puis on passe aux choses s�rieuses, on va lire un par un tous les �l�ments
+% <cl�>=<valeur> (contenus dans #2) en mettant le quark comme dernier couple
+% pour montrer la fin de la liste
+		\skv_readKV_i[#1]#2,\skv_quark,%
+		}%
+}
+
+\def\skv_readKV_i[#1]#2,{%
+% #2 est le premier couple "<cl�>=<valeur>" de la liste qui reste � traiter :
+% tout d'abord, on se d�barrasse des espaces extr�mes
+	\skv_eearg{\def\__temp}{\skv_removeextremespaces{#2}}%
+% Si ce qui en r�sulte est �gal au <quark>,
+	\skv_ifx{\__temp\skv_quark}
+% alors, on a fini et on ne fait rien (fin du processus)
+		{}
+% Sinon, si ce qui en r�sulte est vide (le couple "<cl�>=<valeur>" �tait donc
+% vide ou compos� d'un espace)
+		{\skv_ifx{\__temp\empty}
+% On a fini et on ne fait rien (fin du processus)
+			{}
+% dans le cas contraire, on va isoler la <cl�> et la <valeur> du couple lu en
+% prenant soin de mettre � la fin "=<quark>" pour se pr�munir du cas o�
+% "<cl�>=<valeur>" ne contient que la "<cl�>" et pas de signe "=", ce qui
+% ferait planter la macro � arguments d�limit�s
+			{\expandafter\skv_find_kv\__temp=\skv_quark\_nil[#1]%
+			}%
+% Lorsque la <cl�> et la <valeur> est trouv�e et stock�e, recommencer et aller
+% lire le prochain couple "<cl�>=<valeur>"
+		\skv_readKV_i[#1]%
+		}%
+}
+
+% Voici la macro � arguments d�limit�s � qui on a transmis
+%     <cl�>=<valeur>=<quark> (si <cl�>=<valeur> est l'�l�ment lu)
+% ou
+%     <cl�>=<quark> (si <cl�> est seule)
+% et qui va isoler la <cl�> de la <valeur>.
+\def\skv_find_kv#1=#2\_nil[#3]{%
+% #1 est ce qui se trouve avant le _premier_ signe "=" et
+% #2 est ce qui se trouve entre le premier signe "=" et le \_nil
+% Pour la <cl�>, pas de probl�me, c'est _obligatoirement_ ce qui est avant le
+% signe "=", que ce signe soit pr�sent dans le couple lu ou pas puisqu'on y a
+% rajout� "=<quark>".
+% On �limine les espaces extr�mes pour obtenir la <cl�> d�finitive stock�e dans
+% \__key (il faut 2-d�velopper \skv_removeextremespaces pour qu'elle donne son
+% argument sans espace extr�me)
+	\edef\__key{\detokenize\expandafter\expandafter\expandafter{\skv_removeextremespaces{#1}}}%
+% Pour la <valeur>, on lui �te d'abord les espaces extr�mes
+	\skv_eearg{\def\__val}{\skv_removeextremespaces{#2}}%
+	\skv_ifx{\__val\skv_quark}
+% Si elle est �gale au <quark>, alors la <valeur> vaut "true"
+		{\def\__val{true}}%
+% Sinon, �ter "=<quark>" de la fin de l'argument #2, �liminer les espaces
+% extr�mes de ce qui en r�sulte et stocker le tout dans \__val (tout ceci est
+% effectu� par la macro \skv_find_val <valeur>=<quark>)
+		{\skv_find_val#2}%
+% Si on lit les <cl�s>=<valeurs> par d�faut,
+	\ifskv_default
+% assigner � la macro "\skv_[<trousseau>]_<cl�>" la <valeur> trouv�e
+		\skv_argcsname\let{skv_[#3]_\detokenize\expandafter{\__key}}\__val
+% Puis ajouter � la macro "\skv_[<trousseau>]", qui a �t� pr�alablement
+% initialis�e � <vide> :
+%     \def\skv_[<trousseau>]_<cl�>{<valeur>}
+		\skv_argcsname\skv_eaddtomacro{skv_[#3]}%
+			{\expandafter\def\csname skv_[#3]_\detokenize\expandafter{\__key}\expandafter\endcsname\expandafter{\__val}}%
+% C'est selon ce hashage que sont enregistr�s les couples <cl�>/<valeur> : les
+% <cl�s> sont contenues dans les noms des macros tandis que les <valeurs> sont
+% les textes de remplacement de ces macros.
+% C'est rapide et simple :
+%    a)  pour trouver une <valeur> d'apr�s sa <cl�>, il suffit de d�velopper la
+%        macro \skv_[<trousseau>]_<cl�>
+%    b) pour red�finir une <cl�>, il suffit de red�finir cette macro avec la
+%       nouvelle <valeur>
+%    c) il est facile de v�rifier qu'une <cl�> existe en v�rifiant que la macro
+%       associ�e est d�finie, la primitive \ifcsname le fait tr�s bien
+%    d) en revanche, on ne peut pas faire de recherche _inverse_ de fa�on
+%       pratique : il est en effet plus difficile de trouver la (ou les) <cl�>
+%       contenant une <valeur> donn�e, mais cette limitation n'a pas grande
+%       importance ici (je ne sais pas si les autres syst�mes de <cl�>/<valeur>
+%       sont programm�s de telle sorte que cela soit simple...)
+% Bref, la macro "\skv_[<trousseau>]" contient donc _toutes_ les d�finitions
+% des macros d�finissant les <cl�s>/<valeurs> _par d�faut_ et ex�cuter 
+% "\skv_[<trousseau>]" remet donc toutes les <cl�s> � leur <valeur> par d�faut.
+	\else
+% Dans le cas o� on _lit_ des nouvelles <valeurs> pour des <cl�s>
+		\skv_ifcsname{skv_[#3]_\__key}
+% Si la <cl�> existe (ssi la macro "\skv_[<trousseau>]_<cl�>" est d�finie),
+% alors assigner la <valeur> � cette macro
+			{\skv_argcsname\let{skv_[#3]_\__key}\__val}%
+% Sinon, �mettre un message d'erreur et ne rien faire de plus
+			{\errmessage{Key "\__key" is not defined: nothing is modified}}%
+	\fi
+}
+
+% Cette macro � qui on a transmis "<valeur>=<quark>" ne garde que <valeur>, en
+% �te les espaces extr�mes et stocke le r�sultat dans \__val
+\def\skv_find_val#1=\skv_quark{\skv_eearg{\def\__val}{\skv_removeextremespaces{#1}}}
+
+% Cette macro remet toutes les <cl�s> � leur <valeurs> par d�faut en ex�cutant
+% la macro "\skv_[<trousseau>]"
+\def\useKVdefault[#1]{%
+	\skv_ifcsname{skv_[#1]}
+		{\csname skv_[#1]\endcsname}
+% Si la macro "\skv_[<trousseau>]" n'existe pas, message d'erreur
+		{\errmessage{Undefined set of keys "#1"}}%
+}
+
+% Cette macro donne la <valeur> correspondant � la <cl�> contenue dans #2
+\def\useKV[#1]#2{%
+% Avec \romannumeral, la <valeur> sera obtenue apr�s _2_ d�veloppements de
+% \useKV[<trousseau>]{<cl�>}
+	\romannumeral\skv_ifempty{#2}
+% Si la <cl�> est vide, message d'erreur (il ne peut y avoir de <valeur>
+% associ�e � une <cl�> vide)
+		{\skv_stop\errmessage{Key name missing}}
+		{\skv_ifcsname{skv_[#1]_\skv_removeextremespaces{#2}}
+% Si la macro "\skv_[<trousseau>]_<cl�>" existe, 2-d�velopper le \csname pour
+% avoir la <valeur>
+			{\expandafter\expandafter\expandafter\skv_stop\csname skv_[#1]_\skv_removeextremespaces{#2}\endcsname}
+% Sinon, message d'erreur
+			{\skv_stop\errmessage{Key "\skv_removeextremespaces{#2}" not defined}}%
+		}%
+}
+
+% Voici une macro purement d�veloppable qui teste si #2 (la <cl�> du <trousseau>
+% #1) est �gale � "true" ou � "false" et selon l'issue, ex�cute le 1er ou 2e
+% argument qui suit (arguments appel�s <vrai> et <faux>)
+\def\ifboolKV[#1]#2{%
+% Cette macro donnera un des 2 arguments <vrai> ou <faux> en _2_ d�veloppements
+% gr�ce au \romannumeral
+	\romannumeral\skv_ifempty{#2}
+% Si la <cl�> est vide, message d'erreur
+		{\skv_stop\errmessage{Key name missing}\skv_second}
+		{\skv_ifcsname{skv_[#1]_\skv_removeextremespaces{#2}}
+% Si la <cl�> d�barrass�e de ses espaces extr�mes existe, tester son contenu
+			{\skv_eearg\ifboolKV_i{\csname skv_[#1]_\skv_removeextremespaces{#2}\endcsname}}
+% Sinon, message d'erreur
+			{\skv_stop\errmessage{Key "\skv_removeextremespaces{#2}" not defined}\skv_second}%
+		}%
+}
+
+% Cette macro teste si #1, qui est une <valeur>, vaut "true" ou "false"
+\def\ifboolKV_i#1{%
+% Tester d'abord si elle vaut "true"
+	\skv_ifargtrue{#1}
+		{\expandafter\skv_stop\skv_first}
+		{\skv_ifargfalse{#1}
+% Puis si elle vaut "false"
+			{\expandafter\skv_stop\skv_second}
+% Si ni l'un ni l'autre, la <valeur> n'est pas un bool�en acceptable
+			{\skv_stop\errmessage{Value "#1" is not a valid boolean}\skv_second}%
+		}%
+}
+
+% La macro \skv_ifargtrue{<argument>} teste de fa�on purement d�veloppable si
+% <argument> vaut "true" ou "false".
+% Pour cela, on transmet � \skv_ifargtrue_i l'argument "<argument>true" qui est
+% d�limit� par \_nil
+\def\skv_ifargtrue#1{\skv_ifargtrue_i#1true\_nil}
+% Dans la macro \skv_ifargtrue_i, l'argument #1 est ce qui se trouve avant
+% "true" dans "<argument>true" :
+%     - s'il n'est pas vide, s�lectionner l'argument <faux>
+%     - s'il est vide, cela signifie que <argument> commence par "true" ; il est
+%       donc de la forme "true<autre>"
+%       L'argument #2 est ce qui se trouve apr�s "true" dans "true<autre>true",
+%       c'est donc "<autre>true".
+%       Pour �tre s�r que <autre> est <vide>, on transmet "<autre>true" �
+%       \skv_ifargtrue_ii qui teste si la r�union de ce qui est avant le
+%       premier "true" et ce qui est apr�s est <vide>
+\def\skv_ifargtrue_i#1true#2\_nil{\skv_ifempty{#1}{\skv_ifargtrue_ii#2\_nil}\skv_second}
+\def\skv_ifargtrue_ii#1true#2\_nil{\skv_ifempty{#1#2}}
+
+% On proc�de de m�me pour tester "false"
+\def\skv_ifargfalse#1{\skv_ifargfalse_i#1false\_nil}
+\def\skv_ifargfalse_i#1false#2\_nil{\skv_ifempty{#1}{\skv_ifargfalse_ii#2\_nil}\skv_second}
+\def\skv_ifargfalse_ii#1false#2\_nil{\skv_ifempty{#1#2}}
+
+\def\showKV[#1]#2{%
+% Ecrire dans le fichier log "Key [<trousseau>]<cl�>="
+	\immediate\write-1 {Key [#1]\skv_removeextremespaces{#2}=%
+		\skv_ifcsname{skv_[#1]_\skv_removeextremespaces{#2}}
+% si la <cl�> est d�finie, prendre le \meaning de la macro correspondante
+		{\expandafter\expandafter\expandafter\skv_show\expandafter
+		\meaning\csname skv_[#1]_\skv_removeextremespaces{#2}\endcsname}
+% Sinon, afficher
+		{not defined}%
+	}%
+}
+% Mange ce qui se trouve jusqu'� "->" dans le d�veloppement de \meaning
+\def\skv_show#1->{}
+\skv_restorecatcode
+\endinput
+
+Versions :
+ _____________________________________________________________________________
+| Version |    Date    | Changements                                          |
+|-----------------------------------------------------------------------------|
+|   0.1   | 08/08/2017 | Premi�re version                                     |
+|-----------------------------------------------------------------------------|

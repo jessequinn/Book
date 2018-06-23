@@ -1,0 +1,104 @@
+\documentclass[a4paper,10pt,oneside,brazil]{book}
+
+\usepackage[T1]{fontenc}
+\usepackage{newunicodechar}
+\usepackage[portuguese]{babel}
+
+\setlength{\parskip}{0.4em}
+
+\usepackage[none]{hyphenat}\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\usepackage{booktabs,caption}
+\usepackage[para,online,flushleft]{threeparttable}
+\usepackage{array}
+
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+
+\usepackage{chemfig,chemmacros}
+\chemsetup{formula=chemformula,modules=all}
+\usepackage{graphicx,pdflscape,float}
+\usepackage{siunitx}
+
+\usepackage{textcomp}
+\usepackage{gensymb}
+
+\usepackage[margin=25mm]{geometry}
+\usepackage{float}
+
+%% remove chapter and number from header
+\usepackage{textcase}
+\usepackage{hyperref} % hyperlinks
+
+\makeatletter
+\let\oldcontentsline\contentsline
+\def\contentsline#1#2{%
+  \expandafter\ifx\csname l@#1\endcsname\l@section
+    \expandafter\@firstoftwo
+  \else
+    \expandafter\@secondoftwo
+  \fi
+  {%
+    \oldcontentsline{#1}{\MakeTextLowercase{#2}}%
+  }{%
+    \oldcontentsline{#1}{#2}%
+  }%
+}
+\makeatother
+
+\usepackage{amsmath}
+\usepackage{multirow}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.7}
+\usepackage{filecontents}
+
+\usepackage{tikz,pgffor}
+\usetikzlibrary{calc,positioning,shadows,intersections,decorations.pathreplacing,angles,quotes,arrows,decorations.markings}
+
+%% dummy figures
+\usepackage{adjustbox}
+%\usepackage{pstricks} %conflicts with adjustbox
+
+%% Opcional Materials section
+\usepackage{thmbox}
+
+%% math symbols
+
+%% allows for multiline table cells
+\newcolumntype{L}{>{\centering\arraybackslash}m{3cm}}
+\newcolumntype{C}{>{\centering\arraybackslash}p{3cm}}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcommand\angstrom{\mbox{\normalfont\AA}} 
+
+%% new commands for chemfig
+\newcommand\namebond[4][5pt]{\chemmove{\path(#2)--(#3)node[midway,sloped,yshift=#1]{#4};}}
+\definesubmol\nobond{-[,0.2,,,draw=none]\scriptstyle}
+\newenvironment{tightcenter}{%
+  \setlength{\topsep}{.5ex}
+  \begin{center}
+    }{%
+  \end{center}
+}
+
+
+\begin{document}
+\date{}
+\title{Química Orgânica}
+\author{By Allinger translated by J. Quinn}
+\maketitle
+\tableofcontents
+\include{content/Capítulo_1}
+\include{content/Capítulo_2}
+\include{content/Capítulo_3}
+\include{content/Capítulo_4}
+\include{content/Capítulo_5}
+\include{content/Capítulo_6}
+\include{content/Capítulo_7}
+\include{content/Capítulo_8}
+\include{content/Capítulo_9}
+\end{document}

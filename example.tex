@@ -1,0 +1,28 @@
+\documentclass{article}
+%\usepackage[utf8]{inputenc}
+\usepackage{chemfig}
+
+\newenvironment{tightcenter}{%
+  \setlength{\topsep}{.5ex}
+  \begin{center}
+    }{%
+  \end{center}
+}
+
+\begin{document}
+\begin{tightcenter}
+    \chemnameinit{}
+    \chemname{\setchemfig{atom sep=2em}\chemfig{CH_2(-[6]OH)-CH_2-C(=[1]O)(-[7]OH)}}{\footnotesize ácido \beta-hidroxi-propiônico}
+    \qquad\qquad
+    \chemname{\setchemfig{atom sep=2em}\chemfig{O*4(-C(=O)-CH_2-H_2C-)}}{\footnotesize \beta-propiolactona}
+\end{tightcenter}
+
+\begin{tightcenter}
+    \chemnameinit{}
+    \chemname{\setchemfig{atom sep=2em}\chemfig{O*4(-C(=O)-CH_2-HC(-CH_2-CH_3)-)}}{\footnotesize \beta-valerolactona}
+    \qquad\qquad
+    \chemname{\setchemfig{atom sep=2em}\chemfig{O*5(-C(=O)-CH2-CH2-CH(-CH_3)-)}}{\footnotesize \gamma-valerolactona}
+    \qquad\qquad
+    \chemname{\setchemfig{atom sep=2em}\chemfig{CH_2*6(-CH_2-O-C(=O)-CH_2-CH_2-)}}{\footnotesize \delta-valerolactona}
+\end{tightcenter}
+\end{document}
