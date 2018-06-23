@@ -32,7 +32,7 @@
 
 %% remove chapter and number from header
 \usepackage{textcase}
-\usepackage{hyperref} % hyperlinks
+\usepackage[hidelinks]{hyperref}
 
 \makeatletter
 \let\oldcontentsline\contentsline
@@ -73,7 +73,7 @@
 \newcolumntype{L}{>{\centering\arraybackslash}m{3cm}}
 \newcolumntype{C}{>{\centering\arraybackslash}p{3cm}}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
-\newcommand\angstrom{\mbox{\normalfont\AA}} 
+\newcommand\angstrom{\mbox{\normalfont\AA}}
 
 %% new commands for chemfig
 \newcommand\namebond[4][5pt]{\chemmove{\path(#2)--(#3)node[midway,sloped,yshift=#1]{#4};}}

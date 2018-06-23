@@ -48,8 +48,10 @@
 \contentsline {section}{\numberline {8.8}NOMENCLATURA DOS ÁCIDOS CARBOXÍLICOS}{70}{section.8.8}
 \contentsline {section}{\numberline {8.9}PROPRIEDADES DOS ÁCIDOS CARBOXÍLICOS}{71}{section.8.9}
 \contentsline {section}{\numberline {8.10}ÉSTERES E LACTONAS}{72}{section.8.10}
-\contentsline {chapter}{\numberline {9}Espectroscopia no infravermelho}{74}{chapter.9}
-\contentsline {section}{\numberline {9.1}ESPECTRO ELETROMAGNÉTICO}{74}{section.9.1}
-\contentsline {section}{\numberline {9.2}ESPECTROS NO INFRAVERMELHO}{76}{section.9.2}
-\contentsline {section}{\numberline {9.3}INTERPRETAÇÃO DOS ESPECTROS}{83}{section.9.3}
-\contentsline {section}{\numberline {9.4}EXEMPLOS DO USO DA ESPECTROSCOPIA NO INFRAVERMELHO}{84}{section.9.4}
+\contentsline {section}{\numberline {8.11}GORDURAS, CERAS E PROSTAGLANDINAS}{74}{section.8.11}
+\contentsline {section}{\numberline {8.12}SABÕES E DETERGENTES}{75}{section.8.12}
+\contentsline {chapter}{\numberline {9}Espectroscopia no infravermelho}{77}{chapter.9}
+\contentsline {section}{\numberline {9.1}ESPECTRO ELETROMAGNÉTICO}{77}{section.9.1}
+\contentsline {section}{\numberline {9.2}ESPECTROS NO INFRAVERMELHO}{79}{section.9.2}
+\contentsline {section}{\numberline {9.3}INTERPRETAÇÃO DOS ESPECTROS}{86}{section.9.3}
+\contentsline {section}{\numberline {9.4}EXEMPLOS DO USO DA ESPECTROSCOPIA NO INFRAVERMELHO}{87}{section.9.4}

@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.4.16)  22 JUN 2018 22:20
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.4.16)  23 JUN 2018 08:59
  restricted system commands enabled.
  file:line:error style messages enabled.
 **example.tex
@@ -23,7 +23,7 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.091 seconds
+luaotfload | main : initialization completed in 0.089 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -346,16 +346,16 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./example.aux))
 
 Here is how much of LuaTeX's memory you used:
- 13050 strings out of 494413
+ 12982 strings out of 494413
  100000,319454 words of node,token memory allocated
  355 words of node memory still in use:
    2 hlist, 1 vlist, 1 rule, 2 glue, 3 attribute, 45 glue_spec, 3 attribute_list, 1 write nodes
-   avail lists: 1:1,2:5131,3:1193,4:9,5:31,6:4,7:1559,8:11,9:851,10:5,11:6
- 16754 multiletter control sequences out of 65536+600000
+   avail lists: 1:1,2:4655,3:1066,4:8,5:31,6:6,7:1413,8:9,9:741,10:1,11:6
+ 16686 multiletter control sequences out of 65536+600000
  26 fonts using 1476487 bytes
- 62i,10n,88p,406b,890s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 62i,10n,88p,406b,876s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/local/texlive/2018/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-Output written on example.pdf (1 page, 32887 bytes).
+Output written on example.pdf (1 page, 31453 bytes).
 
 PDF statistics: 37 PDF objects out of 1000 (max. 8388607)
  24 compressed objects within 1 object stream

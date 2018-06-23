@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.4.16)  22 JUN 2018 22:23
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2018.4.16)  23 JUN 2018 10:24
  restricted system commands enabled.
  file:line:error style messages enabled.
 **QO.tex
@@ -23,7 +23,7 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.084 seconds
+luaotfload | main : initialization completed in 0.082 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
@@ -2585,7 +2585,7 @@ Package babel Info: Redefining portuges shorthand "|
 ]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 33.
-<content/images/Figura_2_1.pdf, id=359, 1371.1225pt x 411.5375pt>
+<content/images/Figura_2_1.pdf, id=369, 1371.1225pt x 411.5375pt>
 File: content/images/Figura_2_1.pdf Graphic file (type pdf)
 <use content/images/Figura_2_1.pdf>
 Package luatex.def Info: content/images/Figura_2_1.pdf  used on input line 55.
@@ -2957,7 +2957,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 3.
-<content/images/Figura_6_1.pdf, id=681, 1371.1225pt x 770.88pt>
+<content/images/Figura_6_1.pdf, id=691, 1371.1225pt x 770.88pt>
 File: content/images/Figura_6_1.pdf Graphic file (type pdf)
 <use content/images/Figura_6_1.pdf>
 Package luatex.def Info: content/images/Figura_6_1.pdf  used on input line 13.
@@ -2971,7 +2971,7 @@ Package babel Info: Redefining portuges shorthand "|
 
 
 <./content/images/Figura_6_1.pdf>]
-<content/images/Figura_6_2.pdf, id=703, 1371.1225pt x 770.88pt>
+<content/images/Figura_6_2.pdf, id=714, 1371.1225pt x 770.88pt>
 File: content/images/Figura_6_2.pdf Graphic file (type pdf)
 <use content/images/Figura_6_2.pdf>
 Package luatex.def Info: content/images/Figura_6_2.pdf  used on input line 24.
@@ -3241,16 +3241,51 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 537.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 537.
-[72])
+[72]
 Overfull \hbox (235.48152pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10 CA-PÍ-TULO 8.  GRU-POS FUN-CI-O-NAIS QUE CON-TÊM OXI-GÊ-NIO LI-GADO DU-PLA-MENTE A UM ÁTOMO DE CAR-BONO: O GRUPO CAR-BO-NILA \T1/lmr/m/n/10 73
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 593.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 593.
+[73]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 594.
+
+Overfull \hbox (235.48152pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10 CA-PÍ-TULO 8.  GRU-POS FUN-CI-O-NAIS QUE CON-TÊM OXI-GÊ-NIO LI-GADO DU-PLA-MENTE A UM ÁTOMO DE CAR-BONO: O GRUPO CAR-BO-NILA \T1/lmr/m/n/10 74
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 619.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 619.
+[74
+Missing character: There is no — (U+2014) in font ec-lmr10!
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 632.
+)
+Overfull \hbox (235.48152pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10 CA-PÍ-TULO 8.  GRU-POS FUN-CI-O-NAIS QUE CON-TÊM OXI-GÊ-NIO LI-GADO DU-PLA-MENTE A UM ÁTOMO DE CAR-BONO: O GRUPO CAR-BO-NILA \T1/lmr/m/n/10 75
  []
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 102.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 102.
-[73]
+[75]
+Overfull \hbox (235.48152pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10 CA-PÍ-TULO 8.  GRU-POS FUN-CI-O-NAIS QUE CON-TÊM OXI-GÊ-NIO LI-GADO DU-PLA-MENTE A UM ÁTOMO DE CAR-BONO: O GRUPO CAR-BO-NILA \T1/lmr/m/n/10 76
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 102.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 102.
+[76]
 \openout2 = content/Capítulo_9.aux
  (./content/Capítulo_9.tex
 Cap\'{\i }tulo 9.
@@ -3267,7 +3302,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 33.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 33.
-[74
+[77
 
 
 
@@ -3276,14 +3311,14 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 60.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 60.
- [75]
+ [78]
 Overfull \hbox (2.89317pt too wide) in alignment at lines 65--77
 [][]
  []
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 82.
-<content/images/Figura_9_1.pdf, id=869, 1720.4275pt x 642.4pt>
+<content/images/Figura_9_1.pdf, id=896, 1720.4275pt x 642.4pt>
 File: content/images/Figura_9_1.pdf Graphic file (type pdf)
 <use content/images/Figura_9_1.pdf>
 Package luatex.def Info: content/images/Figura_9_1.pdf  used on input line 90.
@@ -3292,8 +3327,8 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 96.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 96.
-[76<./content/images/Figura_9_1.pdf>]
-<content/images/Figura_9_2.pdf, id=889, 3662.9146pt x 1687.2235pt>
+[79<./content/images/Figura_9_1.pdf>]
+<content/images/Figura_9_2.pdf, id=916, 3662.9146pt x 1687.2235pt>
 File: content/images/Figura_9_2.pdf Graphic file (type pdf)
 <use content/images/Figura_9_2.pdf>
 Package luatex.def Info: content/images/Figura_9_2.pdf  used on input line 99.
@@ -3373,7 +3408,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 123.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 123.
-[77<./content/images/Figura_9_2.pdf>]
+[80<./content/images/Figura_9_2.pdf>]
 Package chemfig Warning: Do not use optional arguments but set the keys "tikz node style" and "tikz code"
 
 
@@ -3426,7 +3461,7 @@ LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 133
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 133.
 
-<content/images/Figura_9_3.pdf, id=916, 3553.76683pt x 1409.29514pt>
+<content/images/Figura_9_3.pdf, id=944, 3553.76683pt x 1409.29514pt>
 File: content/images/Figura_9_3.pdf Graphic file (type pdf)
 <use content/images/Figura_9_3.pdf>
 Package luatex.def Info: content/images/Figura_9_3.pdf  used on input line 164.
@@ -3435,8 +3470,8 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 168.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 168.
-[78]
-<content/images/Figura_9_4.pdf, id=943, 3466.44058pt x 1583.65651pt>
+[81]
+<content/images/Figura_9_4.pdf, id=971, 3466.44058pt x 1583.65651pt>
 File: content/images/Figura_9_4.pdf Graphic file (type pdf)
 <use content/images/Figura_9_4.pdf>
 Package luatex.def Info: content/images/Figura_9_4.pdf  used on input line 181.
@@ -3445,18 +3480,18 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 185.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 185.
- [79<./content/images/Figura_9_3.pdf>]
-<content/images/Figura_9_5.pdf, id=971, 3466.44058pt x 1583.65651pt>
+ [82<./content/images/Figura_9_3.pdf>]
+<content/images/Figura_9_5.pdf, id=999, 3466.44058pt x 1583.65651pt>
 File: content/images/Figura_9_5.pdf Graphic file (type pdf)
 <use content/images/Figura_9_5.pdf>
 Package luatex.def Info: content/images/Figura_9_5.pdf  used on input line 188.
 (luatex.def)             Requested size: 409.71692pt x 187.17915pt.
-<content/images/Figura_9_6.pdf, id=972, 3466.44058pt x 1583.65651pt>
+<content/images/Figura_9_6.pdf, id=1000, 3466.44058pt x 1583.65651pt>
 File: content/images/Figura_9_6.pdf Graphic file (type pdf)
 <use content/images/Figura_9_6.pdf>
 Package luatex.def Info: content/images/Figura_9_6.pdf  used on input line 195.
 (luatex.def)             Requested size: 409.71692pt x 187.17915pt.
-<content/images/Figura_9_7.pdf, id=973, 3050.53667pt x 1484.12463pt>
+<content/images/Figura_9_7.pdf, id=1001, 3050.53667pt x 1484.12463pt>
 File: content/images/Figura_9_7.pdf Graphic file (type pdf)
 <use content/images/Figura_9_7.pdf>
 Package luatex.def Info: content/images/Figura_9_7.pdf  used on input line 202.
@@ -3465,7 +3500,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 206.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 206.
- [80<./content/images/Figura_9_4.pdf><./content/images/Figura_9_5.pdf><./content/images/Figura_9_6.pdf>]
+ [83<./content/images/Figura_9_4.pdf><./content/images/Figura_9_5.pdf><./content/images/Figura_9_6.pdf>]
 Package chemfig Warning: Do not use optional arguments but set the keys "tikz node style" and "tikz code"
 
 Package chemfig Warning: Do not use optional arguments but set the keys "tikz node style" and "tikz code"
@@ -3482,7 +3517,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 240.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 240.
- [81<./content/images/Figura_9_7.pdf>]
+ [84<./content/images/Figura_9_7.pdf>]
 Package chemfig Warning: Do not use optional arguments but set the keys "tikz node style" and "tikz code"
 
 Package chemfig Warning: Do not use optional arguments but set the keys "tikz node style" and "tikz code"
@@ -3500,15 +3535,15 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 310.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 310.
-[82]
+[85]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 311.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 319.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 319.
- [83]
-<content/images/Figura_9_8.pdf, id=1093, 3050.53667pt x 1484.12463pt>
+ [86]
+<content/images/Figura_9_8.pdf, id=1120, 3050.53667pt x 1484.12463pt>
 File: content/images/Figura_9_8.pdf Graphic file (type pdf)
 <use content/images/Figura_9_8.pdf>
 Package luatex.def Info: content/images/Figura_9_8.pdf  used on input line 323.
@@ -3519,13 +3554,13 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 338.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 338.
- [84<./content/images/Figura_9_8.pdf>]
-<content/images/Figura_9_9.pdf, id=1139, 3050.53667pt x 1484.12463pt>
+ [87<./content/images/Figura_9_8.pdf>]
+<content/images/Figura_9_9.pdf, id=1167, 3050.53667pt x 1484.12463pt>
 File: content/images/Figura_9_9.pdf Graphic file (type pdf)
 <use content/images/Figura_9_9.pdf>
 Package luatex.def Info: content/images/Figura_9_9.pdf  used on input line 347.
 (luatex.def)             Requested size: 409.71692pt x 199.32912pt.
-<content/images/Figura_9_10.pdf, id=1140, 3050.53667pt x 1484.12463pt>
+<content/images/Figura_9_10.pdf, id=1168, 3050.53667pt x 1484.12463pt>
 File: content/images/Figura_9_10.pdf Graphic file (type pdf)
 <use content/images/Figura_9_10.pdf>
 Package luatex.def Info: content/images/Figura_9_10.pdf  used on input line 354.
@@ -3534,7 +3569,7 @@ Package luatex.def Info: content/images/Figura_9_10.pdf  used on input line 354.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<content/images/Figura_9_11.pdf, id=1141, 3050.53667pt x 1484.12463pt>
+<content/images/Figura_9_11.pdf, id=1169, 3050.53667pt x 1484.12463pt>
 File: content/images/Figura_9_11.pdf Graphic file (type pdf)
 <use content/images/Figura_9_11.pdf>
 Package luatex.def Info: content/images/Figura_9_11.pdf  used on input line 361.
@@ -3547,19 +3582,19 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 103.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 103.
- [85<./content/images/Figura_9_9.pdf>]
+ [88<./content/images/Figura_9_9.pdf>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 103.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 103.
- [86<./content/images/Figura_9_10.pdf><./content/images/Figura_9_11.pdf>]
+ [89<./content/images/Figura_9_10.pdf><./content/images/Figura_9_11.pdf>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 104.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 104.
  (./QO.aux (./content/Capítulo_1.aux) (./content/Capítulo_2.aux) (./content/Capítulo_3.aux) (./content/Capítulo_4.aux) (./content/Capítulo_5.aux) (./content/Capítulo_6.aux) (./content/Capítulo_7.aux) (./content/Capítulo_8.aux) (./content/Capítulo_9.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 104.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
 Package rerunfilecheck Info: File `QO.out' has not changed.
-(rerunfilecheck)             Checksum: A8AEAD976F719FE58C658C26C377FF6E;4053.
+(rerunfilecheck)             Checksum: 4BB3812543BD26EA7F79A1ED3FFE596F;4203.
 
 
 LaTeX Warning: There were undefined references.
@@ -3567,21 +3602,21 @@ LaTeX Warning: There were undefined references.
 )
 
 Here is how much of LuaTeX's memory you used:
- 53229 strings out of 494413
+ 53255 strings out of 494413
  195394,2373549 words of node,token memory allocated
  1163 words of node memory still in use:
    15 hlist, 2 vlist, 10 rule, 5 glue, 1 kern, 80 attribute, 76 glue_spec, 80 attribute_list, 2 write, 16 pdf_literal, 1 pdf_action, 16 pdf_colorstack nodes
-   avail lists: 1:212,2:27484,3:7282,4:280,5:589,6:206,7:7734,8:150,9:2551,10:70,11:835,12:30
- 54958 multiletter control sequences out of 65536+600000
+   avail lists: 1:214,2:27611,3:7323,4:281,5:600,6:210,7:7736,8:152,9:2553,10:70,11:835,12:31
+ 54977 multiletter control sequences out of 65536+600000
  114 fonts using 11501583 bytes
  72i,24n,123p,2731b,2142s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/201
 8/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/
 lm/lmri8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmro10.pfb>
-Output written on QO.pdf (87 pages, 13682547 bytes).
+Output written on QO.pdf (90 pages, 13692883 bytes).
 
-PDF statistics: 1328 PDF objects out of 1440 (max. 8388607)
- 984 compressed objects within 10 object streams
- 261 named destinations out of 1000 (max. 131072)
- 628 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 1356 PDF objects out of 1440 (max. 8388607)
+ 1008 compressed objects within 11 object streams
+ 268 named destinations out of 1000 (max. 131072)
+ 644 words of extra memory for PDF output out of 10000 (max. 100000000)
 
